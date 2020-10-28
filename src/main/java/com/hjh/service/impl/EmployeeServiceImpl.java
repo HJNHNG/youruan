@@ -18,9 +18,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void saveEmpl(Employee employee) {
-        Employee record = employee;
-        record.setId(employee.getId());
-        record.setName(employee.getName());
-        employeeMapper.insertSelective(record);
+        employeeMapper.insertSelective(employee);
     }
 }
